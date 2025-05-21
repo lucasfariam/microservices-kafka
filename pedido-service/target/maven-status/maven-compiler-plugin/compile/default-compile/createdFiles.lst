@@ -1,0 +1,11 @@
+com\app\pedidos\producer\KafkaPedidoProducer.class
+com\app\pedidos\entity\Pedido.class
+com\app\pedidos\config\KafkaConfig.class
+com\app\pedidos\listener\PagamentoListener.class
+com\app\pedidos\dto\PedidoDTO.class
+com\app\pedidos\dto\PagamentoDTO.class
+com\app\pedidos\PedidoServiceApplication.class
+com\app\pedidos\service\PedidoService.class
+com\app\pedidos\controller\PedidoController.class
+com\app\pedidos\entity\StatusPedido.class
+com\app\pedidos\repository\PedidoRepository.class

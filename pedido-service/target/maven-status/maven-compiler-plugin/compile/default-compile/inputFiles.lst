@@ -1,0 +1,11 @@
+C:\Projetos\desafio-backend-java\pedido-service\src\main\java\com\app\pedidos\entity\StatusPedido.java
+C:\Projetos\desafio-backend-java\pedido-service\src\main\java\com\app\pedidos\PedidoServiceApplication.java
+C:\Projetos\desafio-backend-java\pedido-service\src\main\java\com\app\pedidos\dto\PedidoDTO.java
+C:\Projetos\desafio-backend-java\pedido-service\src\main\java\com\app\pedidos\producer\KafkaPedidoProducer.java
+C:\Projetos\desafio-backend-java\pedido-service\src\main\java\com\app\pedidos\repository\PedidoRepository.java
+C:\Projetos\desafio-backend-java\pedido-service\src\main\java\com\app\pedidos\listener\PagamentoListener.java
+C:\Projetos\desafio-backend-java\pedido-service\src\main\java\com\app\pedidos\dto\PagamentoDTO.java
+C:\Projetos\desafio-backend-java\pedido-service\src\main\java\com\app\pedidos\entity\Pedido.java
+C:\Projetos\desafio-backend-java\pedido-service\src\main\java\com\app\pedidos\config\KafkaConfig.java
+C:\Projetos\desafio-backend-java\pedido-service\src\main\java\com\app\pedidos\controller\PedidoController.java
+C:\Projetos\desafio-backend-java\pedido-service\src\main\java\com\app\pedidos\service\PedidoService.java

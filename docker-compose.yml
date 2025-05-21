@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  banco-pedidos:
+    image: postgres:15
+    container_name: banco-pedidos
+    restart: always
+    environment:
+      POSTGRES_DB: pedidosdb
+      POSTGRES_USER: usuario_pedidos
+      POSTGRES_PASSWORD: senha_pedidos
+    ports:
+      - "5433:5432"
+    volumes:
+      - dados_pedidos:/var/lib/postgresql/data
+
+  banco-pagamentos:
+    image: postgres:15
+    container_name: banco-pagamentos
+    restart: always
+    environment:
+      POSTGRES_DB: pagamentosdb
+      POSTGRES_USER: usuario_pagamentos
+      POSTGRES_PASSWORD: senha_pagamentos
+    ports:
+      - "5434:5432"
+    volumes:
+      - dados_pagamentos:/var/lib/postgresql/data
+
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.6.0
+    container_name: zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+    ports:
+      - "2181:2181"
+
+  kafka:
+    image: confluentinc/cp-kafka:7.6.0
+    container_name: kafka
+    depends_on:
+      - zookeeper
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://localhost:9092
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+
+volumes:
+  dados_pedidos:
+  dados_pagamentos:
